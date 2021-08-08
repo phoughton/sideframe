@@ -1,4 +1,8 @@
-FROM python:3.9
+FROM gitpod/workspace-base:latest
+
+RUN install-packages \
+        python3 \
+        netcat
 
 ENV PIP_USER=false 
 
