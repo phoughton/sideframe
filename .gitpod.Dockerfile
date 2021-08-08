@@ -1,8 +1,9 @@
-FROM gitpod/workspace-base:latest
+FROM gitpod/workspace-full
 
-RUN install-packages \
-        python3 \
-        netcat
+RUN sudo apt-get update  && \
+        sudo apt-get install -y python3 && \
+        sudo apt-get install -y python3 && \
+        sudo rm -rf /var/lib/apt/lists/*
 
 ENV PIP_USER=false 
 
